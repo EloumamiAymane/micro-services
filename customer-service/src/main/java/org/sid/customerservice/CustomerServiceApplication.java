@@ -20,7 +20,7 @@ public class CustomerServiceApplication {
     public CommandLineRunner commandLineRunner(CustomerRepository customerRepository,
                                                RepositoryRestConfiguration restConfiguration){
         return args -> {
-            restConfiguration.exposeIdsFor(Customer.class);
+           // restConfiguration.exposeIdsFor(Customer.class);
             customerRepository.saveAll(
                     List.of(
                             Customer.builder().name("Hassan").email("hassan@gmail.com").build(),
